@@ -9,9 +9,9 @@ NOTE: the suggested version for open3d is 0.15.2, as the API keeps changing and 
 
 ## Requirements:
 Python 3.x (suggested 3.8+)
-    - Numpy
-    - PyTorch
-    - open3d>=0.15.2
+- Numpy
+- PyTorch
+- open3d>=0.15.2
 
 ## Dataset
 The dataset is available [here](https://univr-my.sharepoint.com/:f:/g/personal/federico_cunico_univr_it/Eh3Mau4d7WpLpP06TsMimzABKD344Bmy3xFFk473QlPrhA?e=rwLhhV) and presents both 3D poses (for human and robot) and the RGB video frames.
@@ -22,37 +22,34 @@ The current code visualize the 3D poses only.
 First, download the dataset (see section Dataset), and prepare the repo with the following structure:
 
 ```
-human-robot-collaboration/
-    data/
-        chico/
-            poses/
-                S00/
-                    lift.pkl
-                    span_light.pkl
-                    place-lp_CRASH.pkl
-                    ...
-                S01/
-                    lift.pkl
-                    span_light.pkl
-                    place-lp_CRASH.pkl
-                    ...
-                ...
-            rgb/
-                S00/
-                    00_03.mp4
-                    00_06.mp4
-                    00_12.mp4
-                S01/
-                    00_03.mp4
-                    00_06.mp4
-                    00_12.mp4
-                ...
-
-    chico_dataset.py
-    show_poses.py
-    open3d_wrapper.py
-...
-
+.
+├── data
+│   └── chico
+│       ├── poses
+│       │   ├── S00
+│       │   │   ├── hammer.pkl
+│       │   │   ├── lift.pkl
+│       │   │   ├── place-hp.pkl
+|       |   |   ...
+│       │   ├── S01
+│       │   │   ├── hammer.pkl
+│       │   │   ├── lift.pkl
+│       │   │   ├── place-hp.pkl
+|       |   |   ...
+|       |   ...
+│       └── rgb
+│           ├── S00
+│           │   ├── 00_03.mp4
+│           │   ├── 00_06.mp4
+│           │   └── 00_12.mp4
+│           ├── S01
+│           │   ├── 00_03.mp4
+│           │   ├── 00_06.mp4
+│           │   └── 00_12.mp4
+|           ...
+├── open3d_wrapper.py
+├── chico_dataset.py
+└── show_poses.py
 ```
 Note that the RGB is optional, and not included in the visualization tool.
 
