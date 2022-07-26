@@ -18,4 +18,42 @@ The dataset is available [here](https://univr-my.sharepoint.com/:f:/g/personal/f
 
 ## Run the visualization
 The current code visualize the 3D poses only.
+
+First, download the dataset (see section Dataset), and prepare the repo with the following structure:
+
+```
+human-robot-collaboration
+data/
+    chico/
+        poses/
+            S00/
+                lift.pkl
+                span_light.pkl
+                place-lp_CRASH.pkl
+                ...
+            S01/
+                lift.pkl
+                span_light.pkl
+                place-lp_CRASH.pkl
+                ...
+            ...
+        rgb/
+            S00/
+                00_03.mp4
+                00_06.mp4
+                00_12.mp4
+            S01/
+                00_03.mp4
+                00_06.mp4
+                00_12.mp4
+            ...
+
+chico_dataset.py
+show_poses.py
+open3d_wrapper.py
+...
+
+```
+Note that the RGB is optional, and not included in the visualization tool.
+
 The code to run is `show_poses.py`. 
