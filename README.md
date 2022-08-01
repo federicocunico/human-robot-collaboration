@@ -1,5 +1,5 @@
 # Pose Forecasting in Industrial Human-Robot Collaboration (ECCV2022)
-Utils for "[Pose Forecasting in Industrial Human-Robot Collaboration](https://pythondig.com/r/repository-for-pose-forecasting-in-industrial-humanrobot-collaboration-eccv)" paper accepted at ECCV'22. 
+Utils for "Pose Forecasting in Industrial Human-Robot Collaboration" ([project page](https://pythondig.com/r/repository-for-pose-forecasting-in-industrial-humanrobot-collaboration-eccv)) paper accepted at ECCV'22. 
 
 The code for the forecasting is available [here](https://github.com/AlessioSam/CHICO-PoseForecasting/).
 In this repository there is a torch dataloader for the inspection of the dataset, with utils for visualization using Open3D. 
