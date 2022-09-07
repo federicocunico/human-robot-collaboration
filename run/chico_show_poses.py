@@ -1,6 +1,6 @@
 import numpy as np
-from chico_dataset import CHICODataset
-from open3d_wrapper import Open3DWrapper
+from datasets.chico_dataset import CHICODataset
+from visualizer.open3d_wrapper import Open3DWrapper
 
 
 def main():
