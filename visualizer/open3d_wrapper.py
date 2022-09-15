@@ -1,3 +1,4 @@
+import os
 import time
 from typing import Any, List, Optional, Union
 import open3d as o3d
@@ -65,12 +66,28 @@ class Open3DWrapper:
 
         return vis
 
-    def set_camera_params(self) -> None:
-        raise NotImplementedError()
+    def set_camera_visualization(self) -> None:
+        if self.vis is None:
+            return
+
+        if not os.path.isfile("camera_config.json"):
+            print("Camera parameters not found!! Press ctrl+p to generate.")
+            return
+
+        wc = self.vis.get_view_control()
+        # depends on your screen, when running press ctrl+p to generate a new file with visualization info
+        camera_parameters = o3d.io.read_pinhole_camera_parameters("camera_config.json")
+        wc.convert_from_pinhole_camera_parameters(camera_parameters)
+
+        self.vis.poll_events()
+        self.vis.update_renderer()
 
     # def set_camera_transform(self, location, rotation):
     #     ctrl = self.vis.get_view_control()
     #     ctrl.translate(0,0)
+
+    def save(self, fname):
+        self.vis.capture_screen_image(fname)
 
     def update(self) -> None:
         # Step 1: update geometries transforms
