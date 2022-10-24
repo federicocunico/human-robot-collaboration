@@ -12,6 +12,7 @@ Python 3.x (suggested 3.8+)
 - Numpy
 - PyTorch
 - open3d>=0.15.2
+- trimesh
 
 ## Dataset
 The dataset is available [here](https://univr-my.sharepoint.com/:f:/g/personal/federico_cunico_univr_it/Eh3Mau4d7WpLpP06TsMimzABKD344Bmy3xFFk473QlPrhA?e=rwLhhV) and presents both 3D poses (for human and robot) and the RGB video frames.
